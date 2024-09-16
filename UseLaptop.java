@@ -1,26 +1,29 @@
-package day3Qs;
+package loop5;
 
 public class UseLaptop {
-	public static void main(String[]args) {
+	public static void main(String[] args) {
 		Laptop lap1=new Laptop();
-		lap1.brand="Dell";
-		lap1.price=13000;
-		lap1.color="blue";
-		lap1.isWarranty=true;
-		String name=lap1.brand.toUpperCase();
-		int length=lap1.brand.length();
-		boolean result=lap1.brand.contains("D");
-		char[]last=lap1.brand.toCharArray();
-		String name2=lap1.color.toLowerCase();
-		System.out.println(name);
-		System.out.println(name2);
-		System.out.println(length);
-		System.out.println(last[3]);
-		System.out.println(result);
-
-
+		lap1.brand="HP";
+		lap1.verson="vd123";
+		lap1.isTouchScreen=true;
 		
+		Laptop lap2=new Laptop();
+		lap2.brand="LENOVO";
+		lap2.verson="WP123";
+		lap2.isTouchScreen=false;
 		
+		Laptop lap3=new Laptop();
+		lap3.brand="DELL";
+		lap3.verson="WSP345";
+		lap3.isTouchScreen=false;
+		
+		Laptop[] laps= {lap1,lap2,lap3};
+		for(int i=0;i<laps.length;i++) {
+			if(laps[i].isTouchScreen==true) {
+				
+				System.out.println(laps[i].brand+" "+laps[i].verson+" "+laps[i].isTouchScreen);
+			}
+		}
 	}
 
 }

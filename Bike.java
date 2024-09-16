@@ -1,6 +1,6 @@
 package loop5;
 
-public class Car {
+public class Bike {
 	String brand;
 	int price;
 	String color;
